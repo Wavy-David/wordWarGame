@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B138CB73-65FC-4BA4-B19E-F6F0F7B6C104}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WordWarGame</RootNamespace>
+    <AssemblyName>WordWarGame</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GlobalConnectionString">
+      <HintPath>..\..\..\MyLibrary_C#\GlobalConnectionString\Get The Library Here\GlobalConnectionString.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.3\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.3\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ProjectOxford.Text, Version=1.1.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ProjectOxford.Text.1.1.7\lib\netstandard2.0\Microsoft.ProjectOxford.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="NetSpell.SpellChecker, Version=2.1.7.41329, Culture=neutral, PublicKeyToken=318b389f0db66e46">
+      <HintPath>..\packages\NetSpell.2.1.7\lib\NetSpell.SpellChecker.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Base, Version=18.1460.0.45, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.Base.18.1.0.45\lib\net46\Syncfusion.Chart.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Chart.Windows, Version=18.1460.0.45, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Chart.Windows.18.1.0.45\lib\net46\Syncfusion.Chart.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grouping.Base, Version=18.1460.0.45, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grouping.Base.18.1.0.45\lib\net46\Syncfusion.Grouping.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=18.1460.0.45, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.18.1.0.45\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=18.1460.0.45, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.18.1.0.45\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.2\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Serialization.Primitives.4.3.0\lib\net46\System.Runtime.Serialization.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameExhibit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameExhibit.Designer.cs">
+      <DependentUpon>GameExhibit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameRules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameRules.Designer.cs">
+      <DependentUpon>GameRules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainSwitcher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainSwitcher.Designer.cs">
+      <DependentUpon>MainSwitcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerScoreSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerScoreSample.Designer.cs">
+      <DependentUpon>PlayerScoreSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="promptUserName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="promptUserName.Designer.cs">
+      <DependentUpon>promptUserName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PromptUserNameSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PromptUserNameSample.Designer.cs">
+      <DependentUpon>PromptUserNameSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectLanguage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectLanguage.Designer.cs">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectOponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectOponent.Designer.cs">
+      <DependentUpon>SelectOponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticUserControl.cs" />
+    <Compile Include="PlayerRecordSample.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerRecordSample.Designer.cs">
+      <DependentUpon>PlayerRecordSample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinnerWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WinnerWindow.Designer.cs">
+      <DependentUpon>WinnerWindow.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GameExhibit.resx">
+      <DependentUpon>GameExhibit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameRules.resx">
+      <DependentUpon>GameRules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainSwitcher.resx">
+      <DependentUpon>MainSwitcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerScoreSample.resx">
+      <DependentUpon>PlayerScoreSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="promptUserName.resx">
+      <DependentUpon>promptUserName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromptUserNameSample.resx">
+      <DependentUpon>PromptUserNameSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLanguage.resx">
+      <DependentUpon>SelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectOponent.resx">
+      <DependentUpon>SelectOponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerRecordSample.resx">
+      <DependentUpon>PlayerRecordSample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinnerWindow.resx">
+      <DependentUpon>WinnerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\MainForm.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\promptUserName.datasource" />
+    <None Include="Properties\DataSources\SplashScreen.datasource" />
+    <None Include="Properties\DataSources\StaticUserControl.datasource" />
+    <None Include="Properties\DataSources\WordWarGame.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WordWarGame.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGE\unveiling-circle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnglishFlag1.png" />
+    <None Include="Resources\EnglishFlag2.png" />
+    <None Include="Resources\FrenchFlag3.png" />
+    <None Include="Resources\FrenchFlag.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\monitor.png" />
+    <None Include="Resources\user%281%29.png" />
+    <None Include="Resources\tick.png" />
+    <None Include="Resources\more.png" />
+    <None Include="Resources\criss-cross.png" />
+    <None Include="Resources\trophy.png" />
+    <None Include="Resources\agreement.png" />
+    <None Include="Resources\agreement%282%29.png" />
+    <None Include="Resources\language.png" />
+    <None Include="Resources\vs.png" />
+    <None Include="Resources\interface.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\symbol.png" />
+    <None Include="Resources\symbols%281%29.png" />
+    <None Include="Resources\symbols%283%29.png" />
+    <None Include="Resources\interface%281%29.png" />
+    <None Include="Resources\translate.png" />
+    <None Include="Resources\symbols%282%29.png" />
+    <None Include="Resources\group-refresh%282%29.png" />
+    <None Include="Resources\cancel%281%29.png" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\arrows.png" />
+    <None Include="Resources\803.gif" />
+    <None Include="Resources\244%281%29.gif" />
+    <None Include="Resources\colorful-stripes-geometric-figures-4k-e9-3840x2160.jpg" />
+    <None Include="Resources\LogoMakr_733yZ9.png" />
+    <None Include="Resources\3d-abstract-red-cgi-digital-art-4k-hr-3840x2160.jpg" />
+    <None Include="Resources\abstract-triangles-motion-4k-wq.jpg" />
+    <None Include="Resources\silhouette-of-grass-under-white-sky-925743.jpg" />
+    <None Include="Resources\abstract-digital-motion-5k-11-3840x2160.jpg" />
+    <None Include="Resources\blur-bokeh-dark-defocused-376533%281%29.jpg" />
+    <None Include="Resources\pawel-czerwinski-OALPS7O3jXs-unsplash.jpg" />
+    <None Include="Resources\dark-apple-mac-pro-4k-04-3840x2160.jpg" />
+    <None Include="Resources\30.gif" />
+    <None Include="Resources\splashfx1.gif" />
+    <Content Include="WordWarGameDb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="WordWarGameDb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>WordWarGameDb.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

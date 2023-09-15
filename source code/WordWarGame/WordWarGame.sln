@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordWarGame", "WordWarGame\WordWarGame.csproj", "{B138CB73-65FC-4BA4-B19E-F6F0F7B6C104}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "WordWarGameSetup", "WordWarGameSetup\WordWarGameSetup.vdproj", "{78B12E40-4213-41B3-BF69-6BF6C86611C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B138CB73-65FC-4BA4-B19E-F6F0F7B6C104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B138CB73-65FC-4BA4-B19E-F6F0F7B6C104}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B138CB73-65FC-4BA4-B19E-F6F0F7B6C104}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B138CB73-65FC-4BA4-B19E-F6F0F7B6C104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B12E40-4213-41B3-BF69-6BF6C86611C7}.Debug|Any CPU.ActiveCfg = Debug
+		{78B12E40-4213-41B3-BF69-6BF6C86611C7}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66287578-9F7D-45FD-BB9E-6F7E635D389C}
+	EndGlobalSection
+EndGlobal
